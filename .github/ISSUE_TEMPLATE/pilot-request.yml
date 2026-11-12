@@ -1,0 +1,80 @@
+name: Request a fixed-scope pilot
+description: Start a public, non-sensitive QA or documentation engagement.
+title: "Pilot request: "
+labels:
+  - pilot-request
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for considering VerifiDesk Works. Do not post passwords, API keys, private customer data, unpublished vulnerabilities, or wallet secrets. A request is not an agreement to begin work; scope and payment terms must be confirmed in writing first.
+  - type: dropdown
+    id: service
+    attributes:
+      label: Pilot type
+      options:
+        - Focused website QA — 50 USDC
+        - Content pack from one recording — 125 USDC
+        - Developer onboarding audit — 200 USDC
+        - Other fixed scope
+    validations:
+      required: true
+  - type: input
+    id: public-url
+    attributes:
+      label: Public project URL
+      description: Link only to material that is safe to review publicly.
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: textarea
+    id: journey
+    attributes:
+      label: User journey or deliverable
+      description: Describe the one workflow, document set, or recording to review.
+      placeholder: A new user opens the landing page, reads pricing, creates an account, and reaches the dashboard.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: What must be present for the pilot to be accepted?
+      placeholder: Reproduction steps, screenshots, severity, browser/device, and one retest.
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: Requested deadline
+      placeholder: 2026-11-20 18:00 UTC
+    validations:
+      required: true
+  - type: dropdown
+    id: payment
+    attributes:
+      label: Preferred payment arrangement
+      options:
+        - 50% upfront and 50% on acceptance
+        - Funded escrow or platform milestone
+        - Full payment on acceptance for the 50 USDC QA pilot
+        - Need to discuss
+    validations:
+      required: true
+  - type: input
+    id: asset-network
+    attributes:
+      label: Proposed asset and network
+      description: No funds should be sent until both are confirmed in writing.
+      placeholder: USDC on Ethereum mainnet
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Public-request confirmation
+      options:
+        - label: I have not included credentials, wallet secrets, private customer data, or unpublished security findings.
+          required: true
+        - label: I understand substantial AI assistance is disclosed and consequential claims will be evidence-checked.
+          required: true
