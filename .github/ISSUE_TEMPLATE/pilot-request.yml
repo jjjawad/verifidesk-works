@@ -13,9 +13,9 @@ body:
     attributes:
       label: Pilot type
       options:
-        - Focused website QA — 50 USDC
-        - Content pack from one recording — 125 USDC
-        - Developer onboarding audit — 200 USDC
+        - Focused website QA — $100 (PayPal or USDC)
+        - Content pack from one recording — $125 (PayPal or USDC)
+        - Lead or booking journey audit — $150 (PayPal or USDC)
         - Other fixed scope
     validations:
       required: true
@@ -57,18 +57,27 @@ body:
       options:
         - 50% upfront and 50% on acceptance
         - Funded escrow or platform milestone
-        - Full payment on acceptance for the 50 USDC QA pilot
+        - Full payment on acceptance for the $100 focused website QA pilot
+        - Need to discuss
+    validations:
+      required: true
+  - type: dropdown
+    id: payment-rail
+    attributes:
+      label: Preferred payment method
+      options:
+        - PayPal
+        - USDC
+        - Other agreed method
         - Need to discuss
     validations:
       required: true
   - type: input
-    id: asset-network
+    id: payment-details
     attributes:
-      label: Proposed asset and network
-      description: No funds should be sent until both are confirmed in writing.
-      placeholder: USDC on Ethereum mainnet
-    validations:
-      required: true
+      label: Proposed payment details
+      description: For cryptocurrency, name the exact asset and network. Do not post private account information.
+      placeholder: PayPal invoice, or USDC on Base
   - type: checkboxes
     id: confirmation
     attributes:
@@ -76,5 +85,5 @@ body:
       options:
         - label: I have not included credentials, wallet secrets, private customer data, or unpublished security findings.
           required: true
-        - label: I understand substantial AI assistance is disclosed and consequential claims will be evidence-checked.
+        - label: I understand tools and automation may be used; material assistance will be disclosed when relevant, requested, or required.
           required: true
