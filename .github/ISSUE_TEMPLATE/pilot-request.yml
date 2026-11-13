@@ -13,7 +13,7 @@ body:
     attributes:
       label: Pilot type
       options:
-        - Focused website QA — $100 (PayPal or USDC)
+        - Focused website QA — AED 350 / $100 (bank transfer, PayPal, or USDC)
         - Content pack from one recording — $125 (PayPal or USDC)
         - Lead or booking journey audit — $150 (PayPal or USDC)
         - Other fixed scope
@@ -57,7 +57,7 @@ body:
       options:
         - 50% upfront and 50% on acceptance
         - Funded escrow or platform milestone
-        - Full payment on acceptance for the $100 focused website QA pilot
+        - Full payment on acceptance for the AED 350 / $100 focused website QA pilot
         - Need to discuss
     validations:
       required: true
@@ -66,6 +66,7 @@ body:
     attributes:
       label: Preferred payment method
       options:
+        - UAE bank transfer
         - PayPal
         - USDC
         - Other agreed method
@@ -76,8 +77,8 @@ body:
     id: payment-details
     attributes:
       label: Proposed payment details
-      description: For cryptocurrency, name the exact asset and network. Do not post private account information.
-      placeholder: PayPal invoice, or USDC on Base
+      description: For cryptocurrency, name the exact asset and network. Never post bank, PayPal, or other private account information here.
+      placeholder: UAE bank transfer, PayPal invoice, or USDC on Base
   - type: checkboxes
     id: confirmation
     attributes:
